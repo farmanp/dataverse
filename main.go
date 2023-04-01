@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fpirzada/dataverse/cmd"
+	"github.com/farmanp/dataverse/cmd"
 	"github.com/spf13/cobra"
 )
 
@@ -17,7 +17,8 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
-	storage, err := cmd.GetStorage()
+	cmd.GetStorage()
+
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)

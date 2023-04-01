@@ -1,0 +1,22 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+bin/
+pkg/
+vendor/
+
+# Binary
+myapp
+
+# Test binary
+myapp.test
+
+# Environment Variables
+.env
+
+# IDE
+.idea/
+.vscode/

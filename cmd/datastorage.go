@@ -1,16 +1,14 @@
-import {
-	"os"
-	"fmt"
+package cmd
 
-	"github.com/spf13/cobra"
+import (
 	"github.com/AlecAivazis/survey/v2"
-}
+)
 
-func getStorage() (string, error) {
+func GetStorage() (string, error) {
 	storage := ""
 	prompt := &survey.Select{
-		Message: "Select a storage type:",
-		Options: []string{"S3", "GCS", "Azure Blob Storage"}
+		Message: "Choose a data storage option:",
+		Options: []string{"MySQL", "Postgres"},
 	}
 
 	err := survey.AskOne(prompt, &storage)
@@ -19,14 +17,4 @@ func getStorage() (string, error) {
 	}
 
 	return storage, nil
-}
-
-
-func Execute() {
-	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	fmt.Printf("Select storage: %s\n", storage)
 }
