@@ -1,2 +1,3 @@
-# dataverse
-Modern Data Stack
+# Dataverse
+
+Create a modern data stack 
